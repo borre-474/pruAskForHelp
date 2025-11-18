@@ -89,27 +89,7 @@ const CentroDeAyuda: React.FC = () => {
       setTimeout(() => {
         setIsLoading(false);
 
-        if (query.toLowerCase().includes("pago")) {
-          setSuggestions([
-            { id: 1, title: "Problemas con mi pago", url: "/ayuda/pago-problemas" },
-            { id: 2, title: "Métodos de pago aceptados", url: "/ayuda/metodos-pago" },
-          ]);
-        } else if (query.toLowerCase().includes("perfil")) {
-          setSuggestions([
-            { id: 3, title: "Cómo actualizar mi perfil", url: "/ask.for-help/publicaciones-populares" },
-            { id: 4, title: "Recuperar contraseña", url: "/ask.for-help/publicaciones-populares" },
-          ]);
-        } else if (query.toLowerCase().includes("faq") || query.toLowerCase().includes("pregunta")) {
-          setSuggestions([
-            { id: 99, title: "Preguntas Frecuentes (FAQ)", url: "/ask.for-help/preguntas-frecuentes" },
-          ]);
-        } else {
-          setSuggestions([]);
-          showMessage(`No se encontraron resultados para “${query}”.`);
-        }
-      }, 600);
-    },
-    [searchTerm, showMessage]
+        
   );
 
   /** Click sobre sugerencia */
